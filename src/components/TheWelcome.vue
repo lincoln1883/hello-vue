@@ -1,10 +1,18 @@
 <script setup>
+import { ref } from 'vue'
+
+const count = ref(0)
 </script>
 
 <template>
+<main>
   <div class="home">
-    <h1>This is the home page</h1>
- </div>
+    <h1>Count</h1>
+    <button @click="count++">+</button>
+    <span>{{ count }}</span>
+    <button @click="count--">-</button>
+  </div>
+</main>
 </template>
 
 <style>
@@ -12,6 +20,7 @@
   .home {
     min-height: 100vh;
     display: flex;
+    justify-items: center;
     align-items: center;
   }
 }
